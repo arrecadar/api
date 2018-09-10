@@ -1,0 +1,34 @@
+{
+  "version": "0.1.0",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "babel-node .",
+    "start:dev": "nodemon --exec babel-node . --inspect",
+    "lint": "eslint *.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arrecadar/api.git"
+  },
+  "author": "Arrecadar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arrecadar/api/issues"
+  },
+  "homepage": "https://github.com/arrecadar/api#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.5.0",
+    "eslint-config-pagarme-base": "^2.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "nodemon": "^1.18.4"
+  },
+  "dependencies": {
+    "apollo-server": "^2.0.7",
+    "dotenv": "^6.0.0",
+    "graphql": "^14.0.2"
+  }
+}
