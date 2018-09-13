@@ -1,0 +1,16 @@
+version: '2.3'
+
+services:
+  base:
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./server.js:/api/server.js
+      - ./.babelrc:/api/.babelrc
+
+  api:
+    extends: base
+    ports:
+      - 4004:4004
+    env_file: .env
