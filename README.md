@@ -16,10 +16,9 @@ cp .env.example .env
 ```
 
 ### Running
-Install the dependencies and run the `start` command:
+You can run the API with one simple command
 ```bash
-yarn # or npm install
-yarn start # or npm start
+docker-compose up -d api
 ```
 
 ## Support
