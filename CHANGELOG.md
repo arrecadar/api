@@ -4,7 +4,7 @@
 
 ## Unreleased
 ### Added
-- Dockerfile and docker-compose to development env.
+- ([#9](https://github.com/arrecadar/api/pull/9)) Dockerfile and docker-compose to development env.
 - Test runner, maybe [ava](https://github.com/avajs) with eslint-plugin.
 - Folder structure for `schema` with root queries and resolvers.
 - [Add build scripts before publish in production](https://github.com/babel/example-node-server)
