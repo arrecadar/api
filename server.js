@@ -4,6 +4,12 @@
  */
 import 'dotenv/config'
 import { ApolloServer, gql } from 'apollo-server'
+import { connect as Database } from './bootstrap/database'
+
+/**
+ * Start dabatase connection
+ */
+Database()
 
 const { PORT } = process.env
 

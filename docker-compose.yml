@@ -6,11 +6,28 @@ services:
       context: .
       target: development
     volumes:
+      - ./bootstrap:/api/bootstrap
       - ./server.js:/api/server.js
       - ./.babelrc:/api/.babelrc
+
+  database:
+    image: mongo:4.0.2
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok | mongo localhost:27017 --quiet'
+      interval: 5s
+      retries: 5
+    expose:
+      - 27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: arrecadar
+      MONGO_INITDB_ROOT_PASSWORD: secret
+      MONGO_INITDB_DATABASE: arrecadar
 
   api:
     extends: base
     ports:
       - 4004:4004
     env_file: .env
+    depends_on:
+      database:
+        condition: service_healthy
