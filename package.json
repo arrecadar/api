@@ -27,9 +27,10 @@
     "nodemon": "^1.18.4"
   },
   "dependencies": {
-    "apollo-server": "^2.0.7",
+    "apollo-server-koa": "^2.0.7",
     "dotenv": "^6.0.0",
     "graphql": "^14.0.2",
+    "koa": "^2.5.3",
     "mongoose": "^5.2.15"
   }
 }

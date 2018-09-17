@@ -4,10 +4,10 @@
  */
 import 'dotenv/config'
 import {
-  App,
-  connect as Database,
+  App as bootstrapApp,
+  connect as bootstrapDatabase,
 } from './bootstrap'
 
 Promise
-  .resolve(Database)
-  .then(App)
+  .resolve(bootstrapDatabase)
+  .then(bootstrapApp)
