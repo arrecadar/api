@@ -9,6 +9,6 @@
 - Folder structure for `schema` with root queries and resolvers.
 - [Add build scripts before publish in production](https://github.com/babel/example-node-server)
 - [Add a healthCheck, we may need a workaround while this don't work properly](https://www.apollographql.com/docs/apollo-server/whats-new.html#Health-checks)
-- Mongoose as ODM to handle mongodb
+- ([#10](https://github.com/arrecadar/api/pull/10)) Mongoose as ODM to handle mongodb
 - User register flow
 - User authentication/authorization flow
