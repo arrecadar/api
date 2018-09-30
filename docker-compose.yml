@@ -37,3 +37,12 @@ services:
     depends_on:
       database:
         condition: service_healthy
+
+  test-integration:
+    extends: base
+    volumes:
+      - ./tests:/api/tests
+    command: yarn test:integration
+    depends_on:
+      api:
+        condition: service_healthy
