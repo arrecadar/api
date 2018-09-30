@@ -1,13 +1,7 @@
-import { gql } from 'apollo-server-koa'
+import { Query, Resolvers } from './root'
 
-export const typeDefs = gql`
-  type Query {
-    helloWorld: String
-  }
-`
+export const typeDefs = [
+  Query,
+]
 
-export const resolvers = {
-  Query: {
-    helloWorld: () => 'Hello World',
-  },
-}
+export const resolvers = Resolvers
