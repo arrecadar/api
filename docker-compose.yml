@@ -7,6 +7,7 @@ services:
       target: development
     volumes:
       - ./bootstrap:/api/bootstrap
+      - ./middlewares:/api/middlewares
       - ./schema/:/api/schema
       - ./server.js:/api/server.js
       - ./.babelrc:/api/.babelrc
@@ -29,6 +30,10 @@ services:
     ports:
       - 4004:4004
     env_file: .env
+    healthcheck:
+      test: curl --silent --fail localhost:4004/.well-known/apollo/server-health || exit 1
+      interval: 5s
+      retries: 5
     depends_on:
       database:
         condition: service_healthy

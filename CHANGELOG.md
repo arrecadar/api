@@ -8,7 +8,7 @@
 - Test runner, maybe [ava](https://github.com/avajs) with eslint-plugin.
 - ([#11](https://github.com/arrecadar/api/pull/11)) Folder structure for `schema` with root queries and resolvers.
 - [Add build scripts before publish in production](https://github.com/babel/example-node-server)
-- [Add a healthCheck, we may need a workaround while this don't work properly](https://www.apollographql.com/docs/apollo-server/whats-new.html#Health-checks)
+- ([#12](https://github.com/arrecadar/api/pull/12))[Add a healthCheck, we may need a workaround while this don't work properly](https://www.apollographql.com/docs/apollo-server/whats-new.html#Health-checks)
 - ([#10](https://github.com/arrecadar/api/pull/10)) Mongoose as ODM to handle mongodb
 - User register flow
 - User authentication/authorization flow
