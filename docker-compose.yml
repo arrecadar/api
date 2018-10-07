@@ -8,7 +8,8 @@ services:
     volumes:
       - ./bootstrap:/api/bootstrap
       - ./middlewares:/api/middlewares
-      - ./schema/:/api/schema
+      - ./schema:/api/schema
+      - ./services:/api/services
       - ./server.js:/api/server.js
       - ./.babelrc:/api/.babelrc
 
