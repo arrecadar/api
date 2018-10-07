@@ -30,12 +30,14 @@
   },
   "dependencies": {
     "apollo-server-koa": "^2.0.7",
+    "bcrypt": "^3.0.1",
     "dotenv": "^6.0.0",
     "graphql": "^14.0.2",
     "graphql-custom-types": "^1.4.0",
     "jsonwebtoken": "^8.3.0",
     "koa": "^2.5.3",
     "mongoose": "^5.2.15",
-    "nodemailer": "^4.6.8"
+    "nodemailer": "^4.6.8",
+    "ramda": "^0.25.0"
   }
 }
