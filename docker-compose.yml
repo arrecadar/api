@@ -20,10 +20,6 @@ services:
       retries: 5
     expose:
       - 27017
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: arrecadar
-      MONGO_INITDB_ROOT_PASSWORD: secret
-      MONGO_INITDB_DATABASE: arrecadar
 
   api:
     extends: base
