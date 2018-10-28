@@ -6,11 +6,11 @@ services:
       context: .
       target: development
     volumes:
-      - ./bootstrap:/api/bootstrap
-      - ./middlewares:/api/middlewares
-      - ./schema/:/api/schema
-      - ./server.js:/api/server.js
-      - ./.babelrc:/api/.babelrc
+      - ./packages/api/bootstrap:/api/bootstrap
+      - ./packages/api/middlewares:/api/middlewares
+      - ./packages/api/schema/:/api/schema
+      - ./packages/api/server.js:/api/server.js
+      - ./packages/api/.babelrc:/api/.babelrc
 
   database:
     image: mongo:4.0.2
@@ -25,7 +25,7 @@ services:
     extends: base
     ports:
       - 4004:4004
-    env_file: .env
+    env_file: ./packages/api/.env
     healthcheck:
       test: curl --silent --fail localhost:4004/.well-known/apollo/server-health || exit 1
       interval: 5s
@@ -37,7 +37,7 @@ services:
   test-integration:
     extends: base
     volumes:
-      - ./tests:/api/tests
+      - ./packages/api/tests:/api/tests
     command: yarn test:integration
     depends_on:
       api:
