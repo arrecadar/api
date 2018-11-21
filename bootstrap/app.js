@@ -1,7 +1,10 @@
 import Koa from 'koa'
-import { ApolloServer } from 'apollo-server-koa'
+import { ApolloServer, ApolloError } from 'apollo-server-koa'
 import { typeDefs, resolvers } from '../schema'
-import onHealthCheck from '../middlewares/healthCheck'
+import {
+  context,
+  onHealthCheck,
+} from '../middlewares'
 
 const app = new Koa()
 const { PORT } = process.env
@@ -9,6 +12,7 @@ const { PORT } = process.env
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context,
 })
 
 server.applyMiddleware({
