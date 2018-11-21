@@ -22,5 +22,5 @@ server.applyMiddleware({
 })
 
 export default app.listen({ port: PORT }, () => {
-  console.log(`🚀 appication running at port ${PORT}`) // eslint-disable-line no-console
+  console.log(`🚀 application running at port ${PORT}`) // eslint-disable-line no-console
 })
