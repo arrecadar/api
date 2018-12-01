@@ -10,5 +10,5 @@
 - [Add build scripts before publish in production](https://github.com/babel/example-node-server)
 - ([#12](https://github.com/arrecadar/api/pull/12))[Add a healthCheck, we may need a workaround while this don't work properly](https://www.apollographql.com/docs/apollo-server/whats-new.html#Health-checks)
 - ([#10](https://github.com/arrecadar/api/pull/10)) Mongoose as ODM to handle mongodb
-- User register flow
-- User authentication/authorization flow
+- ([#16](https://github.com/arrecadar/api/pull/16)) User register flow
+- ([#16](https://github.com/arrecadar/api/pull/16)) User authentication/authorization flow
